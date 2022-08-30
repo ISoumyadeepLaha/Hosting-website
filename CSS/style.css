@@ -8,12 +8,6 @@
 }
 body {
   background-color: #cad5e2;
-  /* background-color: #fff; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* padding: 40px 20px; */
 }
 .container {
   width: 100%;
@@ -28,12 +22,11 @@ nav {
   padding: 20px 40px;
 }
 .nav-list {
-  list-style: none;
-  width: 800px;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .list {
   list-style: none;
@@ -49,11 +42,7 @@ nav {
 .list li a{
     text-decoration: none;
 }
-.list li a:hover{
-    color: #1f1f1f;
-    font-weight: 900;
-}
-.list li a:focus{
+.list li a:hover , .list li a:focus{
     color: #1f1f1f;
     font-weight: 900;
 }
@@ -72,16 +61,15 @@ nav {
   background-color: #12b0e8;
   color: #fff;
 }
-.main-content-first {
+.main-content-first,.main-content-third  {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
-  /* border: 2px solid black; */
 }
-.first-left {
+.first-left,.third-left {
   height: 100%;
   width: 50%;
   display: flex;
@@ -90,18 +78,18 @@ nav {
   align-items: flex-start;
   gap: 30px;
 }
-.first-left h1 {
+.first-left h1, .third-left h1 {
   font-size: 60px;
   font-weight: 900;
   color: #1f1f1f;
   text-transform: capitalize;
 }
-.first-left p {
+.first-left p, .third-left p {
   font-size: 18px;
   font-weight: 100;
   color: gray;
 }
-.first-left button {
+.first-left button, .third-left button {
   width: 200px;
   height: 50px;
   border: 2px solid #12b0e8;
@@ -113,7 +101,7 @@ nav {
   cursor: pointer;
   box-shadow: 2px 5px 2px 3px gray;
 }
-.first-left button:hover {
+.first-left button:hover, .third-left button:hover {
   background: transparent;
   color: #1f1f1f;
 }
@@ -124,7 +112,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
-  /* border: 2px solid black; */
 }
 .second-left {
   height: 100%;
@@ -163,53 +150,6 @@ nav {
   background: transparent;
   color: #1f1f1f;
 }
-
-.main-content-third {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 20px;
-  /* border: 2px solid black; */
-}
-.third-left {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 30px;
-}
-.third-left h1 {
-  font-size: 60px;
-  font-weight: 900;
-  color: #1f1f1f;
-  text-transform: capitalize;
-}
-.third-left p {
-  font-size: 18px;
-  font-weight: 100;
-  color: gray;
-}
-.third-left button {
-  width: 200px;
-  height: 50px;
-  background: transparent;
-  border: 2px solid #12b0e8;
-  background-color: #12b0e8;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 20px;
-  padding: 10px;
-  cursor: pointer;
-  box-shadow: 2px 5px 2px 3px gray;
-}
-.third-left button:hover {
-  background: transparent;
-  color: #1f1f1f;
-}
 .service {
   width: 100%;
   display: flex;
@@ -224,7 +164,7 @@ nav {
   display: flex;
 }
 .service-heading h1 {
-  font-size: 55px;
+  font-size: 50px;
   text-transform: capitalize;
   color: #1f1f1f;
 }
@@ -238,47 +178,27 @@ nav {
   font-weight: 100;
   color: gray;
 }
-.service-cards {
-  /* width: 100%;
-    height: 100%; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* padding: 40px 20px; */
-}
-.cards-first {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.cards {
+  margin-top: 2rem;
   padding: 40px 20px;
-}
-.cards-second {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .card {
-  width: 30%;
-  height: 20%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  /* border: 2px solid grey; */
   border-radius: 20px;
   padding: 20px;
 }
-.card:hover {
+.card:hover{
   box-shadow: 2px 5px 2px 3px gray;
   background-color: #f9fbfc;
 }
+
 .card h1 {
   font-size: 30px;
   text-transform: capitalize;
@@ -294,7 +214,6 @@ nav {
 
 .price-section {
   width: 100%;
-  height: 650px;
   text-align: center;
   background: linear-gradient(180deg, #12b0e8, #0d81ac);
 }
@@ -310,21 +229,17 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* background-color: burlywood; */
   padding: 20px;
 }
 .price {
   width: 25%;
   height: 500px;
-  /* border: 2px solid black; */
-  border: none;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
-  text-align: left;
   background-color: #cad5e2;
   margin-left: 20px;
   position: relative;
@@ -383,7 +298,6 @@ nav {
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  /* padding: 0 40px; */
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 400;
@@ -449,11 +363,9 @@ nav {
 }
 .customer-reiew {
   width: 100%;
-  /* border: 2px solid black; */
 }
 .customer-review-header {
   height: 150px;
-  /* border: 2px solid black; */
   text-align: center;
   padding: 10px 40px;
   display: flex;
@@ -538,7 +450,6 @@ nav {
 .register-container {
   width: 100%;
   height: 300px;
-  /* border: 2px solid black; */
   background: linear-gradient(180deg, #12b0e8, #0d81ac);
   display: flex;
   flex-direction: row;
@@ -549,8 +460,6 @@ nav {
 
 .register-left {
   width: 50%;
-  /* height: 100px; */
-  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -592,23 +501,17 @@ nav {
 
 footer {
   width: 100%;
-  height: 250px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 20px;
-  background-color: #f9fbfc;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .footer-section {
-  width: 15%;
-  height: 200px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
-  padding: 40px 20px;
+  padding: 40px;
 }
 .footer-list {
   list-style: none;
@@ -623,3 +526,504 @@ footer {
   font-weight: 100;
   color: grey;
 }
+
+
+@media only screen and (max-width:480px){
+  body{
+    overflow-x: hidden;
+  }
+  .list{
+    display: none;
+  }
+  .nav-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  } 
+  .logo{
+    width: 100px;
+  }
+  .nav-list button{
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .main-content-first,.main-content-second, .main-content-third{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  } 
+  .first-left,.second-left,.third-left {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .first-left h1, .second-left h1, .third-left h1 {
+    font-size: 30px;
+  }
+  .first-left p, .second-left p, .third-left p {
+    font-size: 18px;
+  }
+  .first-left button, .second-left button, .third-left button {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .first-right img , .second-right img, .third-right img {
+    width: 400px;
+  }
+  .service {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+   .service-heading,.service-description {
+    width: 100%;
+  }
+  .service-heading h1 {
+    font-size: 30px;
+  }
+  .service-description p {
+    font-size: 14px;
+  }
+  .cards{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .card h1 {
+    font-size: 24px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .price-section {
+    height: fit-content;
+  }
+  .price-section h1 {
+    font-size: 30px;
+  }
+  .price-plans {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .price {
+    width: 100%
+  }
+  .customer-reiew{
+    margin-top: 2rem;
+  }
+  .customer-review-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+  .customer-review-header h1 {
+    font-size: 20px;
+    text-align: left;
+  }
+  .customer-review-header p {
+    width: 100%;
+    padding: 0px;
+    font-size: 16px;
+  }
+  .cutomer-part {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .customer-card {
+    width: 100%;
+  }
+  .customer-card:hover {
+    width: 100%;
+    background-color: #fff;
+  }
+  .register-container {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .register-left {
+    width: 100%;
+  }
+  .register-left h1 {
+    font-size: 30px;
+  }
+  .register-left p {
+    font-size: 14px;
+  }
+  .register-right {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .register-right button {
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .register-right button:hover {
+    background: linear-gradient(180deg, #12b0e8, #033446);
+    color: #cad5e2;
+  }
+  footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-device-width:481px) and (max-device-width:767px){
+  body{
+    overflow-x: hidden;
+  }
+  .list{
+    display: none;
+  }
+  .nav-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  } 
+  .logo{
+    width: 120px;
+  }
+  .nav-list button{
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .main-content-first,.main-content-second, .main-content-third{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  } 
+  .first-left,.second-left,.third-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .first-left h1, .second-left h1, .third-left h1 {
+    font-size: 40px;
+  }
+  .first-left p, .second-left p, .third-left p {
+    font-size: 20px;
+  }
+  .first-left button, .second-left button, .third-left button {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .first-right img , .second-right img, .third-right img {
+    width: 500px;
+  }
+  .service {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+   .service-heading,.service-description {
+    width: 100%;
+    text-align: center;
+  }
+  .service-heading h1 {
+    font-size: 40px;
+  }
+  .service-description p {
+    font-size: 18px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+  .card h1 {
+    font-size: 24px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .card:hover {
+    box-shadow: 2px 5px 2px 3px gray;
+    background-color: #f9fbfc;
+  }
+  .price-section {
+    height: fit-content;
+  }
+  .price-section h1 {
+    font-size: 30px;
+  }
+  .price-plans {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .price {
+    width: 70%;
+  }
+  .customer-reiew{
+    margin-top: 2rem;
+  }
+  .customer-review-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .customer-review-header h1 {
+    font-size: 40px;
+  }
+  .customer-review-header p {
+    width: 100%;
+    padding: 0%;
+  }
+  .cutomer-part {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .customer-card {
+    width: 100%;
+  }
+  .customer-card:hover {
+    width: 100%;
+    background-color: #fff;
+  }
+  .register-container {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .register-left {
+    width: 100%;
+    text-align: center;
+  }
+  .register-left h1 {
+    font-size: 30px;
+  }
+  .register-left p {
+    font-size: 14px;
+  }
+  .register-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-right button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .register-right button:hover {
+    background: linear-gradient(180deg, #12b0e8, #033446);
+    color: #cad5e2;
+  }
+  footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-device-width:768px) and (max-device-width:1030px){
+  body{
+    overflow-x: hidden;
+  }
+  .list{
+    display: flex;
+    font-size: 20px;
+  }
+  .nav-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+  } 
+  .logo{
+    width: 120px;
+  }
+  .nav-list button{
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .main-content-first,.main-content-second, .main-content-third{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  } 
+  .first-left,.second-left,.third-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .first-left h1, .second-left h1, .third-left h1 {
+    font-size: 40px;
+  }
+  .first-left p, .second-left p, .third-left p {
+    font-size: 20px;
+  }
+  .first-left button, .second-left button, .third-left button {
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .first-right img , .second-right img, .third-right img {
+    width: 500px;
+  }
+  .service {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+   .service-heading,.service-description {
+    width: 100%;
+    text-align: center;
+  }
+  .service-heading h1 {
+    font-size: 40px;
+  }
+  .service-description p {
+    font-size: 18px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+  .card h1 {
+    font-size: 24px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .card:hover {
+    box-shadow: 2px 5px 2px 3px gray;
+    background-color: #f9fbfc;
+  }
+  .price-section {
+    height: fit-content;
+  }
+  .price-section h1 {
+    font-size: 30px;
+  }
+  .price-plans {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .price {
+    width: 50%;
+  }
+  .customer-reiew{
+    margin-top: 2rem;
+  }
+  .customer-review-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .customer-review-header h1 {
+    font-size: 40px;
+  }
+  .customer-review-header p {
+    width: 100%;
+    padding: 0%;
+  }
+  .cutomer-part {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .customer-card {
+    width: 100%;
+  }
+  .customer-card:hover {
+    width: 100%;
+    background-color: #fff;
+  }
+  .register-container {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .register-left {
+    width: 100%;
+    text-align: center;
+  }
+  .register-left h1 {
+    font-size: 30px;
+  }
+  .register-left p {
+    font-size: 14px;
+  }
+  .register-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-right button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .register-right button:hover {
+    background: linear-gradient(180deg, #12b0e8, #033446);
+    color: #cad5e2;
+  }
+  footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+
